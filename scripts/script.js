@@ -99,12 +99,36 @@ scrollBtn.addEventListener('click', () => {
 
 document.querySelectorAll('.lang-block').forEach(block => {
   const button = block.querySelector('.lang-toggle');
+  const textEl = block.querySelector('.lang-text');
+
+  const texts = {
+    ru: `Меня зовут Арменак. Мне 18 лет, я разработчик, создаю сайты и пишу чат-боты,
+объединяя фронтенд и лёгкий бэкенд в своих проектах. Сейчас я учусь на втором курсе
+РТУ МИРА по направлению «Фуллстек-разработка». Мои проекты современные, смелые и всегда
+выполнены с полной отдачей — я вкладываю в них максимум энергии и креатива.`,
+
+    en: `My name is Armenak. I’m 18 years old, a developer creating websites and building
+chatbots, combining frontend and light backend in my projects. I’m currently a
+second-year student at RTU MIREA, studying Full-Stack Development. My projects are
+modern, bold, and always executed with full dedication — I put all my energy and
+creativity into each one.`
+  };
+
+  // стартовый текст
+  textEl.textContent = texts.ru;
 
   button.addEventListener('click', () => {
-    const currentLang = block.dataset.lang;
-    const nextLang = currentLang === 'ru' ? 'en' : 'ru';
+    const current = block.dataset.lang;
+    const next = current === 'ru' ? 'en' : 'ru';
 
-    block.dataset.lang = nextLang;
-    button.textContent = nextLang === 'ru' ? 'EN' : 'RU';
+    textEl.classList.add('fade-out');
+
+    setTimeout(() => {
+      textEl.textContent = texts[next];
+      textEl.classList.remove('fade-out');
+
+      block.dataset.lang = next;
+      button.textContent = next === 'ru' ? 'EN' : 'RU';
+    }, 300);
   });
 });

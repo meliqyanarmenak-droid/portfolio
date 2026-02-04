@@ -167,7 +167,6 @@ nav a:hover::after {
 }
 
 
-/* фон */
 .skills-bg {
     position: absolute;
     inset: 0;
@@ -206,29 +205,23 @@ nav a:hover::after {
     margin-top: 30px;
 }
 
-/* тексты */
 .lang-text {
-    
     color: var(--gray);
     line-height: 1.7;
 
-    opacity: 0;
-    transform: translateY(6px);
-    pointer-events: none;
-
-    transition:
-        opacity 0.35s ease,
-        transform 0.35s ease;
-}
-
-.lang-block[data-lang="ru"] .lang-ru,
-.lang-block[data-lang="en"] .lang-en {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
-/* кнопка переключения */
+.lang-text.fade-out {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
 .lang-toggle {
     position: absolute;
     top: -60px;
@@ -301,7 +294,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* ← центр по горизонтали */
     justify-content: center;
     z-index: 1;
 }
@@ -368,10 +360,8 @@ section {
 
 .but
 {
-    position: absolute;
-    top: 71%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin-top: 30px;
     width: 200px;
     height: 50px;
     background: #181818;
@@ -382,7 +372,6 @@ section {
     font-size: 20px;
     font-family: verdana;
     letter-spacing: 4px;
-/*    border-radius: 20px; */
 }
 
 .but:before,
@@ -466,13 +455,11 @@ span:after
 
 
 
-/* активное состояние */
 #about.active .about-img {
     opacity: 0.18;
     transform: scale(1);
 }
 
-/* контент поверх */
 #about .content {
     position: relative;
     z-index: 2;
