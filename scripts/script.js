@@ -40,7 +40,6 @@ const contactObserver = new IntersectionObserver(entries => {
 contactObserver.observe(contacts);
 
 
-// ribbons
 let ribbonInterval;
 
 function createRibbon() {
@@ -114,7 +113,6 @@ modern, bold, and always executed with full dedication — I put all my energy a
 creativity into each one.`
   };
 
-  // стартовый текст
   textEl.textContent = texts.ru;
 
   button.addEventListener('click', () => {
