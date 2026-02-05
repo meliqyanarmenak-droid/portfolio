@@ -510,3 +510,123 @@ footer {
         display: none;
     }
 }
+
+@media (max-width: 1200px) {
+  header {
+    width: 92%;
+  }
+
+  .content {
+    max-width: 700px;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    min-height: 100vh;
+    height: auto;
+    padding: 120px 0;
+  }
+
+  header {
+    top: 20px;
+  }
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .content h2 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .but {
+    width: 180px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 46px;
+  }
+
+  .about-bg {
+    inset: 40px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 16px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  section {
+    min-height: 100vh;
+    height: auto;
+    padding: 100px 0;
+  }
+
+  .avatar {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 20px;
+  }
+
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .content h2 {
+    font-size: 26px;
+  }
+
+  .skills-cta {
+    padding: 14px 28px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .scroll-down {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about-bg {
+    display: none;
+  }
+
+  footer {
+    height: auto;
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .but {
+    width: 160px;
+    height: 42px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+}
