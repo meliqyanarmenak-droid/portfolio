@@ -23,6 +23,12 @@ body {
     overflow-x: hidden;
 }
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* ---------- HEADER ---------- */
 header {
     position: fixed;
@@ -171,29 +177,26 @@ nav a:hover::after {
     position: absolute;
     inset: 0;
 
-    background-image: url("../img/bg\ skills.jpg"); /* ← путь к фотке */
+    background-image: url("../img/bg\ skills.jpg");
+    /* ← путь к фотке */
     background-size: cover;
     background-position: center;
 
     filter: grayscale(100%);
     opacity: 0.25;
-     mask-image: radial-gradient(
-        circle at center,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 1) 35%,
-        rgba(0, 0, 0, 0.6) 55%,
-        rgba(0, 0, 0, 0.25) 70%,
-        rgba(0, 0, 0, 0) 100%
-    );
+    mask-image: radial-gradient(circle at center,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 35%,
+            rgba(0, 0, 0, 0.6) 55%,
+            rgba(0, 0, 0, 0.25) 70%,
+            rgba(0, 0, 0, 0) 100%);
 
-    -webkit-mask-image: radial-gradient(
-        circle at center,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 1) 35%,
-        rgba(0, 0, 0, 0.6) 55%,
-        rgba(0, 0, 0, 0.25) 70%,
-        rgba(0, 0, 0, 0) 100%
-    );
+    -webkit-mask-image: radial-gradient(circle at center,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 35%,
+            rgba(0, 0, 0, 0.6) 55%,
+            rgba(0, 0, 0, 0.25) 70%,
+            rgba(0, 0, 0, 0) 100%);
 }
 
 
@@ -232,7 +235,7 @@ nav a:hover::after {
     border-radius: 50%;
 
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 
     color: var(--white);
     font-size: 12px;
@@ -252,7 +255,7 @@ nav a:hover::after {
 }
 
 .lang-toggle:hover {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     border-color: var(--white);
     transform: scale(1.05);
 }
@@ -358,8 +361,7 @@ section {
     line-height: 1.7;
 }
 
-.but
-{
+.but {
     position: relative;
     margin-top: 30px;
     width: 200px;
@@ -377,8 +379,7 @@ section {
 .but:before,
 .but:after,
 span:before,
-span:after
-{
+span:after {
     content: '';
     position: absolute;
     width: 10px;
@@ -388,23 +389,22 @@ span:after
     mix-blend-mode: hue;
 }
 
-.but:before
-{
+.but:before {
     top: -2px;
     left: -2px
 }
-.but:after
-{
+
+.but:after {
     top: -2px;
     right: -2px;
 }
-.butt:before
-{
+
+.butt:before {
     bottom: -2px;
     left: -2px
 }
-.butt:after
-{
+
+.butt:after {
     bottom: -2px;
     right: -2px
 }
@@ -412,10 +412,9 @@ span:after
 .but:hover:before,
 .but:hover:after,
 .but:hover .butt:before,
-.but:hover .butt:after
-{
-    width: calc( 180px/2 );
-    height: calc( 50px/2 )
+.but:hover .butt:after {
+    width: calc(180px/2);
+    height: calc(50px/2)
 }
 
 /* ----- ABOUT BACKGROUND STRIPES ----- */
@@ -505,128 +504,157 @@ footer {
 }
 
 /* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1200px) {
+    .content {
+        max-width: 700px;
+        padding: 32px;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        min-height: 100vh;
+        height: auto;
+        padding: 120px 0;
+    }
+
+    header {
+        top: 20px;
+    }
+
+    .avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+
+    .but {
+        width: 180px;
+        height: 46px;
+        font-size: 16px;
+        line-height: 46px;
+    }
+
+    .about-bg {
+        inset: 40px;
+        gap: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         display: none;
     }
+
+    header {
+        position: fixed;
+        top: 16px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    section {
+        min-height: 100vh;
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .avatar {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 20px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .skills-cta {
+        padding: 14px 28px;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .scroll-down {
+        width: 48px;
+        height: 48px;
+    }
+
+    .about-bg {
+        display: none;
+    }
+
+    footer {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .about {
+        padding: 80px 0;
+        min-height: 100vh;
+    }
+
+    .about-bg {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        gap: 16px;
+        padding: 0 12px;
+    }
+
+    .about-img {
+        clip-path: none;
+    }
+
+    .bg-photo {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        border-radius: 14px;
+
+        opacity: 0;
+        transform: translateY(40px);
+        transition: 0.8s ease;
+    }
+
+    .bg-photo.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@media (max-width: 1200px) {
-  header {
-    width: 92%;
-  }
-
-  .content {
-    max-width: 700px;
-    padding: 32px;
-  }
-}
-
-@media (max-width: 992px) {
-  section {
-    min-height: 100vh;
-    height: auto;
-    padding: 120px 0;
-  }
-
-  header {
-    top: 20px;
-  }
-
-  .avatar {
-    width: 160px;
-    height: 160px;
-  }
-
-  .content h2 {
-    font-size: 30px;
-  }
-
-  .content p {
-    font-size: 15px;
-  }
-
-  .but {
-    width: 180px;
-    height: 46px;
-    font-size: 16px;
-    line-height: 46px;
-  }
-
-  .about-bg {
-    inset: 40px;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    position: fixed;
-    top: 16px;
-  }
-
-  nav {
-    display: none;
-  }
-
-  section {
-    min-height: 100vh;
-    height: auto;
-    padding: 100px 0;
-  }
-
-  .avatar {
-    width: 130px;
-    height: 130px;
-    margin-bottom: 20px;
-  }
-
-  .intro h1 {
-    font-size: 28px;
-  }
-
-  .intro p {
-    font-size: 14px;
-  }
-
-  .content {
-    padding: 24px;
-  }
-
-  .content h2 {
-    font-size: 26px;
-  }
-
-  .skills-cta {
-    padding: 14px 28px;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-  }
-
-  .scroll-down {
-    width: 48px;
-    height: 48px;
-  }
-
-  .about-bg {
-    display: none;
-  }
-
-  footer {
-    height: auto;
-    padding: 40px 0;
-  }
-}
 
 @media (max-width: 420px) {
-  .content h2 {
-    font-size: 22px;
-  }
+    .content h2 {
+        font-size: 22px;
+    }
 
-  .but {
-    width: 160px;
-    height: 42px;
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
+    .but {
+        width: 160px;
+        height: 42px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
 }
