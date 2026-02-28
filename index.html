@@ -5,38 +5,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Armenak — Portfolio</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">Armenak</div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
+    <header>
+        <div class="logo">A<span class="logo-dot">.</span></div>
         <nav>
             <a href="#intro">Intro</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
             <a href="#contacts">Contacts</a>
         </nav>
-
-        <a class="telegram" href="https://t.me/fstXsami" target="_blank">Telegram</a>
+        <a class="telegram-btn" href="https://t.me/fstXsami" target="_blank">
+            <span>Telegram</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
     </header>
 
     <main>
+
         <section id="intro">
-            <div class="intro-bg"></div>
+            <div class="noise-overlay"></div>
+            <div class="intro-grid"></div>
             <div class="intro">
-                <div class="avatar"></div>
-                <h1>Armenak</h1>
-                <p>Frontend Developer · Digital Portfolio</p>
-                <a href="#about" class="but"><span class="butt"></span>About me</a>
+                <div class="intro-tag reveal-up">Full-stack Developer</div>
+                <div class="avatar-wrap reveal-up">
+                    <div class="avatar"></div>
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-ring ring-2"></div>
+                </div>
+                <h1 class="reveal-up">Armenak<span class="accent">.</span></h1>
+                <p class="intro-sub reveal-up">Full-stack Developer · Digital Portfolio</p>
+                <a href="#projects" class="cta-btn reveal-up">
+                    <span class="btn-text">my projects</span>
+                    <span class="btn-arrow">→</span>
+                    <span class="btn-bg"></span>
+                </a>
+            </div>
+            <div class="scroll-hint">
+                <span class="scroll-line"></span>
+                <span class="scroll-label">scroll</span>
             </div>
             <div class="divider"></div>
-
         </section>
 
         <section id="about">
@@ -45,8 +63,8 @@
                 <div class="about-img img-2"></div>
                 <div class="about-img img-3"></div>
             </div>
-
             <div class="content">
+                <div class="section-label">01 — About</div>
                 <h2>About Me</h2>
                 <div class="lang-block" data-lang="ru">
                     <button class="lang-toggle">EN</button>
@@ -55,62 +73,163 @@
                         РТУ МИРА по направлению «Фуллстек-разработка». Мои проекты современные, смелые и всегда
                         выполнены с полной отдачей — я вкладываю в них максимум энергии и креатива.</p>
                 </div>
-
             </div>
-
             <div class="divider"></div>
         </section>
-
 
         <section id="skills">
-
             <div class="skills-bg"></div>
-
             <div class="content">
+                <div class="section-label">02 — Skills</div>
                 <h2>Skills</h2>
-                <p>HTML · CSS · JavaScript · UI · Animations</p>
-
-                <div class="skills-cta">
-                    check my projects
+                <div class="skills-pills">
+                    <span class="pill">Full-stack</span>
+                    <span class="pill">UI/UX Design</span>
+                    <span class="pill">Digital Marketing</span>
+                    <span class="pill">Website Launches</span>
+                    <span class="pill">SEO</span>
+                    <span class="pill">AI Chatbots</span>
                 </div>
-
+                <div class="skills-cta">check my projects</div>
                 <button class="scroll-down" aria-label="Scroll to projects">
-                    <svg class="arrow" width="28" height="28" viewBox="0 0 24 24">
-                        <path d="M6 9l6 6 6-6" fill="none" stroke-width="2" />
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6" fill="none" stroke-width="2.5" />
                     </svg>
                 </button>
-
-
             </div>
             <div class="divider"></div>
         </section>
 
-
         <section id="projects">
-            <div class="content">
+            <div class="content content-wide">
+                <div class="section-label">03 — Projects</div>
                 <h2>Projects</h2>
-                <p>Здесь будут карточки моих проектов.</p>
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-num">01</div>
+                            <div class="project-info">
+                                <h3>Aurix Studio</h3>
+                                <p>Сайт моей студии по разработке уникальных сайтов и чат-ботов под ключ.</p>
+                                <div class="project-tags"><span>Real</span><span>Website</span><span>My project</span></div>
+                            </div>
+                            <a href="https://aurixstudio.netlify.app/" target="_blank" class="project-btn">
+                                <span>View project</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-num">02</div>
+                            <div class="project-info">
+                                <h3>Flower Test</h3>
+                                <p>Пример для демонстрации уровня разработки дизайна сайтов на цветочном магазине.</p>
+                                <div class="project-tags"><span>Example</span><span>Website</span><span>Complex</span></div>
+                            </div>
+                            <a href="https://meliqyanarmenak-droid.github.io/flower-test/" target="_blank" class="project-btn">
+                                <span>View project</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-num">03</div>
+                            <div class="project-info">
+                                <h3>Info Prod</h3>
+                                <p>Пример простой разработки сайта на инфобизе.</p>
+                                <div class="project-tags"><span>Example</span><span>Simple</span><span>website</span></div>
+                            </div>
+                            <a href="https://meliqyanarmenak-droid.github.io/info-prod/" target="_blank" class="project-btn">
+                                <span>View project</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-num">04</div>
+                            <div class="project-info">
+                                <h3>Editing Portfolio</h3>
+                                <p>Мое сайт-портфолио монтажера.</p>
+                                <div class="project-tags"><span>Real</span><span>Portfolio</span><span>Editing</span></div>
+                            </div>
+                            <a href="https://meliqyanarmenak-droid.github.io/editing-portfolio/" target="_blank" class="project-btn">
+                                <span>View project</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="divider"></div>
+        </section>
+
+        <section id="blog">
+            <div class="content content-wide">
+                <div class="section-label">04 — Blog</div>
+                <h2>Blog</h2>
+                <div class="blog-grid">
+
+                    <article class="blog-card">
+                        <div class="blog-card-top">
+                            <span class="blog-cat">Личный блог</span>
+                            <span class="blog-date">01</span>
+                        </div>
+                        <h3>Блог о работе и жизни.</h3>
+                        <p>Место, где делюсь мыслями, проектами и опытом.</p>
+                        <div class="blog-footer"><span class="read-more">читать →</span></div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-card-top">
+                            <span class="blog-cat">AURIX Studio</span>
+                            <span class="blog-date">02</span>
+                        </div>
+                        <h3>Креативная студия.</h3>
+                        <p>Проект по созданию сайтов и ботов, и автоматизации для бизнеса.</p>
+                        <div class="blog-footer"><span class="read-more">читать →</span></div>
+                    </article>
+
+                </div>
             </div>
             <div class="divider"></div>
         </section>
 
         <section id="contacts">
+            <div class="noise-overlay"></div>
             <div class="content">
-                <h2>Contacts</h2>
-                <p>Contact me via Telegram.</p>
-                <a href="https://t.me/fstXsami" target="_blank" class="contact-link">
-                    &lt;Message me&gt;
+                <div class="section-label">05 — Contacts</div>
+                <h2>Let's Talk<span class="accent">.</span></h2>
+                <p>Got a project in mind? I'm open to freelance and collaboration.</p>
+                <a href="https://t.me/fstXsami" target="_blank" class="contact-link cta-btn">
+                    <span class="btn-text">Message me</span>
+                    <span class="btn-arrow">→</span>
+                    <span class="btn-bg"></span>
                 </a>
-
             </div>
         </section>
+
     </main>
 
     <footer>
-        © 2026 · Armenak · All rights reserved
+        <span>© 2026</span>
+        <span class="footer-dot">·</span>
+        <span>Armenak</span>
+        <span class="footer-dot">·</span>
+        <span>All rights reserved</span>
     </footer>
 
     <script src="scripts/script.js"></script>
 </body>
-
 </html>
